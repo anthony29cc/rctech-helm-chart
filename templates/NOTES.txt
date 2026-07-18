@@ -1,0 +1,8 @@
+Chart {{ .Chart.Name }} instalado como release "{{ .Release.Name }}".
+
+Para acceder a la aplicación:
+  kubectl port-forward svc/{{ include "rctech-web.fullname" . }} 8080:{{ .Values.service.port }}
+  Luego abre http://localhost:8080
+
+Réplicas actuales: {{ .Values.replicaCount }}
+Imagen: {{ .Values.image.repository }}:{{ .Values.image.tag }}

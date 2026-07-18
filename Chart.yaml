@@ -1,0 +1,6 @@
+apiVersion: v2
+name: rctech-web
+description: Helm chart de ejemplo para RC Technology SRL — app web con Nginx
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

@@ -1,0 +1,24 @@
+# Número de réplicas del Deployment
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: "1.25-alpine"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+# Contenido personalizado que se inyecta vía ConfigMap
+app:
+  name: "RC Technology SRL"
+  color: "#0ea5e9"
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
